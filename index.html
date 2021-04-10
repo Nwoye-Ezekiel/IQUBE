@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+     <script src="index.js"></script> 
+     <script src="https://kit.fontawesome.com/6d56d9fa5c.js" crossorigin="anonymous"></script>
+    <title>IQUBE</title>
+  </head>
+  <body>
+    <div class="background-top"></div>
+    <div id="field-cont" class="field-cont">
+      <div class="field">
+        <div class="title">
+          <p>Complete your Purchase</p>
+        </div>
+        <div class="links-cont">
+          <div class="links">
+            <div>
+              <div class="link-div"><a id="link1" class="link link1" onclick="next0()"">Personal Info</a></div>
+            </div>
+            <div>
+              <div class="link-div"><a id="link2" class="link link2" onclick="next1()">Billing Info</a></div>
+            </div>
+            <div>
+              <div class="link-div"><a id="link3" class="link link3" onclick="next2()">Confirm Payment</a></div>
+            </div>
+          </div>
+          
+          <div id="bar" class="bar bar1"></div>
+        </div>
+<!-- ---------------------------------------------------------------------------------------------------------- -->
+          <div class="form-cont page1" id="page1">
+            <form id="form" action="">
+                <div class="input">
+                    <label for="name">Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Opara Linus Ahmed"
+                    />
+                </div>
+
+                <div class="input">
+                    <label for="email">Email Address<sup style="color: red; margin-left: 8px;">*</sup></label>
+                    <p class="info" >The purchase reciept would be sent to this address</p>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="OparaLinusAhmed@devmail.com"
+                    onInput="this.required = true;"/>
+                </div>
+
+                <div class="input">
+                    <label for="address1">Address1</label>
+                    <input
+                        type="text"
+                        id="address1"
+                        name="address1"
+                        placeholder="The address of the user goes here"
+                    />
+                </div>
+
+                <div class="input">
+                    <label for="address2">Address2</label>
+                    <input
+                        type="text"
+                        id="address2"
+                        name="address2"
+                        placeholder="and here"
+                    />
+                </div>
+
+                <div class="split">
+                  <div class="input">
+                    <label for="local-government">Local Government</label>
+                    <input
+                        type="text"
+                        id="local-government"
+                        name="local-government"
+                        placeholder="Surulere"
+                    />
+                </div>
+
+                <div class="input dropdown">
+                  
+                    <label for="state">State</label>
+                    <select id="state" name="country">
+                        <option value="australia">Lagos</option>
+                        <option value="canada">Anambra</option>
+                        <option value="usa">Delta</option>
+                    </select>
+                </div>
+                </div>
+                <div class="next-cont">
+                  <button class="next" onclick="next1()">Next</button>
+                  <p class="cancel" onclick = "cancel()">Cancel Payment</p>
+                </div>
+          </div>
+
+<!-- ------------------------------------------------------------------------------------------------------------ -->
+
+
+          <div class="form-cont page2" id="page2">
+                <div class="input">
+                    <label for="card-name">Name on Card<sup style="color: red; margin-left: 8px;">*</sup></label>
+                    <input
+                    class="pg2-input"
+                        type="text"
+                        id="card-name"
+                        name="card-name"
+                        placeholder="Opara Linus Ahmed"
+                    onInput="this.required = true;"/>
+                </div>
+
+                <div class="input dropdown">
+                  
+                    <label for="card-type">Card Type<sup style="color: red; margin-left: 8px;">*</sup></label>
+                      <select id="card-type" name="country">
+                        
+                          <option value="australia">Visa</option>
+                          <option value="canada">MasterCard</option>
+                          <option value="usa">Verve</option>
+                      </select>
+                </div>
+
+                
+
+                <div class="split">
+                  <div class="input">
+                    <label for="card-type">Card details<sup style="color: red; margin-left: 8px;">*</sup></label>
+                    <input
+                    class="pg2-input"
+                        type="text"
+                        id="card-details"
+                        name="card-details"
+                        placeholder= "44960  44960  44960  44960";
+                    onInput="this.required = true;"/>
+                  </div>
+
+                  <div class="input">
+                    <label for="card-type">Expiry date<sup style="color: red; margin-left: 8px;">*</sup></label>
+                    <input
+                    class="pg2-input"
+                        type="text"
+                        id="expiry-date"
+                        name="expiry-date"
+                        placeholder= "04 / 23";
+                    onInput="this.required = true;"/>
+                  </div>
+
+                 <div class="input">
+                    <label for="card-type">CVV<sup style="color: red; margin-left: 8px;">*</sup></label>
+                    <input
+                    class="pg2-input"
+                        type="text"
+                        id="cvv"
+                        name="cvv"
+                        placeholder= "923";
+                    onInput="this.required = true;"/>
+                  </div>
+                </div>
+                <div class="next-cont">
+                  <button class="next" onclick="next2()">Next</button>
+                  <p class="cancel" onclick = "cancel()">Cancel Payment</p>
+                </div>
+          </div>
+          
+<!-- ------------------------------------------------------------------------------------------------------------ -->
+
+
+          <div class="form-cont page3" id="page3">
+
+                <div class="board">
+                  <div class="blue">
+                    <div class="details">
+                      <div class="item">Item</div>
+                      <div class="price">Price</div>
+                    </div>
+                  </div>
+
+                  <div class="content">
+                    <div class="item1">
+                      <div class="item">Data science and usability</div>
+                      <div style="font-weight: bold;" class="price">50,000.00</div>
+                    </div>
+
+                    <div class="item2">
+                      <div class="item">Shipping</div>
+                      <div style="color: black;" class="price">0.00</div>
+                    </div>
+                  </div>
+                  <div class="line"></div>
+                  <div class="total">
+                    <div class="">Total</div>
+                    <div style="font-weight: bold;" class="">50,000.00</div>
+                  </div>
+
+                </div>
+
+                <div class="next-cont">
+                  <button type="submit" class="next" onclick="pay()">Pay</button>
+                  <p class="cancel" onclick = "cancel()">Cancel Payment</p>
+                </div>
+            </form>
+          </div>
+
+
+<!-- ------------------------------------------------------------------------------------------------------------ -->
+
+
+        </div>
+      </div>
+          <div class="page4" id="page4">
+            <div class="complete">
+              <div class="vector"><i class="fas fa-check"></i></div>
+              <div class="body">
+                <div class="completed">Purchase Completed</div>
+                <div class="note">Please check your email for details concerning this transaction</div>
+                <div class="return"><a href="#">Return Home</a></div>
+              </div>
+            </div>
+      </div>
+
+  </body>
+</html>
