@@ -133,7 +133,7 @@ select::-ms-expand {
   display: none;
 }
 select {
-  background-image: url("arrow.jpg");
+  background-image: url("arrow.JPG");
   background-position: right;
   background-position-y: 3px;
   background-repeat: no-repeat;
