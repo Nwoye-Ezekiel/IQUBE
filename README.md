@@ -1,5 +1,5 @@
 # Nwoye-Ezekiel.github.io
-This project is an interview programming task by IQUBE.
+This project is an internship programming task by IQUBE.
 
 View live here: [iqube test]
 
